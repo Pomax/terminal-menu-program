@@ -1,4 +1,5 @@
 var createMenu = require("terminal-menu");
+var copy = function(o) { return JSON.parse(JSON.stringify(o)); };
 
 var Menu = function(name, program) {
   this.setup(name, program);
@@ -17,10 +18,10 @@ Menu.prototype = {
     setTimeout(fn.bind(this), 1);
   },
   cacheOptions: function() {
-    this._options = JSON.parse(JSON.stringify(this.options));
+    this._options = copy(this.options);
   },
   restoreOptions: function() {
-    this.options = JSON.parse(JSON.stringify(this._options));
+    this.options = copy(this._options);
     this.selectables.forEach(function(op) { op.toggled = this.options[op.content]; }.bind(this));
   },
   start: function() {
@@ -102,27 +103,20 @@ Menu.prototype = {
         }
       }
       if(entry.type === "confirm") {
-        this.schedule(function() {
-          entry.callback(this.options);
-        });
         if(entry.screen) {
-          this.schedule(function() {
-            this.program.run(entry.screen);
-          });
+          this.program.run(entry.screen);
         }
         if(entry.callback) {
-          entry.callback();
+          entry.callback(copy(this.options));
         }
       }
       if(entry.type === "cancel") {
         this.restoreOptions();
         if(entry.screen) {
-          this.schedule(function() {
-            this.program.run(entry.screen);
-          });
+          this.program.run(entry.screen);
         }
         if(entry.callback) {
-          entry.callback();
+          entry.callback(copy(this.options));
         }
       }
     }
