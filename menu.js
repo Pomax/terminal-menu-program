@@ -34,6 +34,12 @@ Menu.prototype = {
     this.menu.reset();
     this.menu.createStream().pipe(process.stdout);
   },
+  reset: function() {
+    if(this.menu) {
+      this.menu.reset();
+      this.setup(this.name, this.program);
+    }
+  },
   close: function() {
     if(this.menu) {
       this.menu.reset();
@@ -125,8 +131,6 @@ Menu.prototype = {
     this.close();
     this.start();
     var menu = this.menu;
-
-    if(this.onLoad) { this.onLoad(); }
 
     if(arguments[0] === undefined) { this.cacheOptions(); }
     optionidx = optionidx || this.departureidx || 0;
