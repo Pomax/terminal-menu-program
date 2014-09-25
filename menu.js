@@ -126,6 +126,8 @@ Menu.prototype = {
     this.start();
     var menu = this.menu;
 
+    if(this.onLoad) { this.onLoad(); }
+
     if(arguments[0] === undefined) { this.cacheOptions(); }
     optionidx = optionidx || this.departureidx || 0;
     delete this.departureidx;

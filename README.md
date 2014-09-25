@@ -7,6 +7,8 @@ This is a simple bit of polish on top of the [terminal-menu](https://www.npmjs.o
 
 Have a look at the `test.js` file to see how it all works, but it's pretty much "create a program", "create named menus", "add options for transitioning to other menus, possibly with callbacks" and "create checkbox options, possibly with callbacks on toggles". That's it.
 
+Well, okay, and you can give menus an `onLoad` and `onUnload`, which will trigger when a screen is swapped in and out.
+
 Because part of the beauty of a retro ansi terminal menu program for serious 80s technicolor business is that you don't need a lot to do a lot.
 
 super basic minimal example
