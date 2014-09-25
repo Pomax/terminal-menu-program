@@ -21,13 +21,13 @@ Program.prototype = {
   },
   run: function(name, idx) {
     this.reset();
-    if(!name) { process.exit(0); }
-    this.active = this.menus[name]
-    this.active.draw(idx);
+    if(!!name) {
+      this.active = this.menus[name];
+      this.active.draw(idx);
+    }
   },
   halt: function() {
     this.reset();
-    process.exit(0);
   },
   debug: function(s) {
     this.active.menu.write(s+"\n");

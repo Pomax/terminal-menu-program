@@ -18,7 +18,7 @@ var mainMenu = (function(program) {
   menu.addCheckedOption("toggle 1", function(state) { /* ... */ });
   menu.addCheckedOption("toggle 2", function(state) { /* ... */ });
   menu.addSpacer();
-  menu.setCancel("exit");
+  menu.setCancel("exit", function() { process.exit(0); });
   return menu;
 }(program));
 

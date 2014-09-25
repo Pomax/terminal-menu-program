@@ -49,8 +49,8 @@ Menu.prototype = {
   addSpacer: function(s) {
     this.addText('');
   },
-  addOption: function(s, n) {
-    var op = { type: "option", content: s, screen: n };
+  addOption: function(s, n, callback) {
+    var op = { type: "option", content: s, screen: n, callback: callback };
     this.addSelectable(op);
   },
   addCheckedOption: function(s, callback) {
@@ -59,10 +59,18 @@ Menu.prototype = {
     this.options[s] = false;
   },
   setConfirm: function(label, nextScreen, callback) {
+    if(typeof nextScreen === "function") {
+      callback = nextScreen;
+      nextScreen = false;
+    }
     var op = { type: "confirm", content: label, screen: nextScreen, callback: callback };
     this.addSelectable(op);
   },
   setCancel: function(label, prevScreen, callback) {
+    if(typeof prevScreen === "function") {
+      callback = prevScreen;
+      prevScreen = false;
+    }
     var op = { type: "cancel", content: label, screen: prevScreen, callback: callback };
     this.addSelectable(op);
   },
@@ -84,9 +92,14 @@ Menu.prototype = {
       }
       if(entry.type === "option") {
         this.departureidx = idx;
-        return this.schedule(function() {
-          this.program.run(entry.screen);
-        });
+        if(entry.screen) {
+          this.schedule(function() {
+            this.program.run(entry.screen);
+          });
+        }
+        if(entry.callback) {
+          entry.callback();
+        }
       }
       if(entry.type === "confirm") {
         this.schedule(function() {
