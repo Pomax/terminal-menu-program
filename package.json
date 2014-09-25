@@ -1,0 +1,27 @@
+{
+  "name": "terminal-menu-programs",
+  "version": "0.0.1",
+  "description": "retro ansi terminal menu programs for serious 80s technicolor business",
+  "main": "index.js",
+  "dependencies": {
+    "terminal-menu": "^0.3.2"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pomax/terminal-menu-program"
+  },
+  "keywords": [
+    "menu",
+    "terminal",
+    "ansi",
+    "program"
+  ],
+  "author": {
+    "name": "Pomax",
+    "email": "pomax@nihongoresources.com",
+    "url": "http://pomax.github.io"
+  }
+}
