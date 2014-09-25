@@ -25,7 +25,7 @@ menu.addOption("menu switch (going to this screen when selected)", "main");
 menu.addSpacer();
 menu.addCheckedOption("a toggle option", function(state) { /* ... */ });
 menu.addSpacer();
-menu.setCancel("exit", function() { process.exit(0); });
+menu.setCancel("exit", function() { program.halt(); process.exit(0); });
 
 // run single screen program
 program.run("main");

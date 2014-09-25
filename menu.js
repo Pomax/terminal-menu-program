@@ -105,17 +105,25 @@ Menu.prototype = {
         this.schedule(function() {
           entry.callback(this.options);
         });
-        this.schedule(function() {
-          this.program.run(entry.screen);
-        });
-        return;
+        if(entry.screen) {
+          this.schedule(function() {
+            this.program.run(entry.screen);
+          });
+        }
+        if(entry.callback) {
+          entry.callback();
+        }
       }
       if(entry.type === "cancel") {
         this.restoreOptions();
-        this.schedule(function() {
-          this.program.run(entry.screen);
-        });
-        return;
+        if(entry.screen) {
+          this.schedule(function() {
+            this.program.run(entry.screen);
+          });
+        }
+        if(entry.callback) {
+          entry.callback();
+        }
       }
     }
   },
