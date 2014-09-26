@@ -1,4 +1,4 @@
-Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business.
+Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business... programs.
 ---
 
 Who likes install scripts with runtime flags? Really? Guess who doesn't: everyone else (rounded up).
