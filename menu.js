@@ -62,8 +62,12 @@ Menu.prototype = {
     var op = { type: "option", content: s, screen: n, callback: callback };
     this.addSelectable(op);
   },
-  check: function(s, callback) {
-    var op = { type: "checkbox", content: s, toggled: false, callback: callback };
+  check: function(s, toggled, callback) {
+    if(typeof toggled === "function") {
+      callback = toggled;
+      toggled = false;
+    }
+    var op = { type: "checkbox", content: s, toggled: toggled, callback: callback };
     this.addSelectable(op);
     this.options[s] = false;
   },

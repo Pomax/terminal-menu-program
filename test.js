@@ -54,8 +54,8 @@ var toggleMenu =(function(program){
   menu.text("and saving will do a callback with all states in an options object. Cancel restores");
   menu.text("the state when you entered the menu.");
   menu.spacer();
-  menu.check("toggle 1");
-  menu.check("toggle 2");
+  menu.check("toggle 1", true);
+  menu.check("toggle 2", true);
   menu.check("toggle 3");
   menu.check("toggle 4");
   menu.check("toggle 5");

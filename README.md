@@ -34,6 +34,8 @@ menu.spacer();
 menu.option("menu switch (going to this screen when selected)", "main");
 menu.spacer();
 menu.check("a toggle option", function(state) { /* ... */ });
+menu.check("a checked toggle option", true);
+menu.check("a checked toggle callback", true, function(state) { /* ... */ });
 menu.spacer();
 menu.cancel("exit", function() { program.halt(); process.exit(0); });
 
