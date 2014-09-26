@@ -1,4 +1,4 @@
-Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business.
+Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business... programs.
 ---
 
 Who likes install scripts with runtime flags? Really? Guess who doesn't: everyone else (rounded up).
@@ -10,6 +10,14 @@ Have a look at the `test.js` file to see how it all works, but it's pretty much 
 Well, okay, and you can give menus an `onLoad` and `onUnload`, which will trigger when a screen is swapped in and out.
 
 Because part of the beauty of a retro ansi terminal menu program for serious 80s technicolor business is that you don't need a lot to do a lot.
+
+Screenshots?
+---
+Sure, why not. Bask in the glory of classic terminal menus:
+
+![image](https://cloud.githubusercontent.com/assets/177243/4414059/0e4e9a00-4510-11e4-924e-59db1c523557.png)
+
+![image](https://cloud.githubusercontent.com/assets/177243/4414078/6337fade-4510-11e4-811d-a6555dccacd8.png)
 
 super basic minimal example
 ---
