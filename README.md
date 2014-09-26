@@ -11,7 +11,7 @@ Well, okay, and you can give menus an `onLoad` and `onUnload`, which will trigge
 
 Because part of the beauty of a retro ansi terminal menu program for serious 80s technicolor business is that you don't need a lot to do a lot.
 
-Screnshots?
+Screenshots?
 ---
 Sure, why not. Bask in the glory of classic terminal menus:
 
