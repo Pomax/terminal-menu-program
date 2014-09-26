@@ -22,12 +22,20 @@ Program.prototype = {
   run: function(name, idx) {
     this.reset();
     if(!!name) {
-      if(this.active && this.active.onUnload) {
-        this.active.onUnload();
+      if(this.active) {
+        if (this.active.onUnload) {
+          this.active.onUnload();
+        }
+        if(this.onUnload) {
+          this.onUnload(this.active);
+        }
       }
       this.active = this.menus[name];
+      if(this.onLoad) {
+        this.onLoad(this.active);
+      }
       if(this.active.onLoad) {
-        this.active.onLoad();
+        this.active.onLoad(this.active);
       }
       this.active.draw(idx);
     }
