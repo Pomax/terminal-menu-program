@@ -141,7 +141,7 @@ Menu.prototype = {
     var menu = this.menu;
 
     if(arguments[0] === undefined) { this.cacheOptions(); }
-    optionidx = optionidx || this.departureidx || 0;
+    optionidx = optionidx || this.departureidx || this.defaultidx || 0;
     delete this.departureidx;
 
     this.operations.forEach(function(op, idx) {
