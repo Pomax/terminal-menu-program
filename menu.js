@@ -69,7 +69,7 @@ Menu.prototype = {
     }
     var op = { type: "checkbox", content: s, toggled: toggled, callback: callback };
     this.addSelectable(op);
-    this.options[s] = false;
+    this.options[s] = toggled;
   },
   confirm: function(label, nextScreen, callback) {
     if(typeof nextScreen === "function") {
