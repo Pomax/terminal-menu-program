@@ -20,14 +20,14 @@ var builder = require("terminal-menu-program"),
     program = new builder.Program("Test program"),
 
 // single screen definition
-menu = program.addMenu("main");
-menu.addText("A Terminal Menu Program");
-menu.addSpacer();
-menu.addOption("menu switch (going to this screen when selected)", "main");
-menu.addSpacer();
-menu.addCheckedOption("a toggle option", function(state) { /* ... */ });
-menu.addSpacer();
-menu.setCancel("exit", function() { program.halt(); process.exit(0); });
+menu = program.menu("main");
+menu.text("A Terminal Menu Program");
+menu.spacer();
+menu.option("menu switch (going to this screen when selected)", "main");
+menu.spacer();
+menu.check("a toggle option", function(state) { /* ... */ });
+menu.spacer();
+menu.cancel("exit", function() { program.halt(); process.exit(0); });
 
 // run single screen program
 program.run("main");

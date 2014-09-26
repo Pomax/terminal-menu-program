@@ -46,26 +46,28 @@ Menu.prototype = {
       this.menu.close();
     }
   },
-  addText: function(s) {
+
+
+  text: function(s) {
     var label = s + "\n";
     this.operations.push({
       type: "text",
       content: label
     });
   },
-  addSpacer: function(s) {
-    this.addText('');
+  spacer: function(s) {
+    this.text('');
   },
-  addOption: function(s, n, callback) {
+  option: function(s, n, callback) {
     var op = { type: "option", content: s, screen: n, callback: callback };
     this.addSelectable(op);
   },
-  addCheckedOption: function(s, callback) {
+  check: function(s, callback) {
     var op = { type: "checkbox", content: s, toggled: false, callback: callback };
     this.addSelectable(op);
     this.options[s] = false;
   },
-  setConfirm: function(label, nextScreen, callback) {
+  confirm: function(label, nextScreen, callback) {
     if(typeof nextScreen === "function") {
       callback = nextScreen;
       nextScreen = false;
@@ -73,7 +75,7 @@ Menu.prototype = {
     var op = { type: "confirm", content: label, screen: nextScreen, callback: callback };
     this.addSelectable(op);
   },
-  setCancel: function(label, prevScreen, callback) {
+  cancel: function(label, prevScreen, callback) {
     if(typeof prevScreen === "function") {
       callback = prevScreen;
       prevScreen = false;
@@ -81,6 +83,8 @@ Menu.prototype = {
     var op = { type: "cancel", content: label, screen: prevScreen, callback: callback };
     this.addSelectable(op);
   },
+
+
   addSelectable: function(op) {
     this.operations.push(op);
     this.selectables.push(op);

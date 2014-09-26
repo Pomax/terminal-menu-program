@@ -8,7 +8,7 @@ var Program = function(name) {
 };
 
 Program.prototype = {
-  addMenu: function(name) {
+  menu: function(name) {
     var menu = new Menu(name, this);
     this.menus[name] = menu;
     return menu;
