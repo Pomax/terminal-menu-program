@@ -117,20 +117,20 @@ Menu.prototype = {
         }
       }
       if(entry.type === "confirm") {
-        if(entry.screen) {
-          this.program.run(entry.screen);
-        }
         if(entry.callback) {
           entry.callback(copy(this.options));
+        }
+        if(entry.screen) {
+          this.program.run(entry.screen);
         }
       }
       if(entry.type === "cancel") {
         this.restoreOptions();
-        if(entry.screen) {
-          this.program.run(entry.screen);
-        }
         if(entry.callback) {
           entry.callback(copy(this.options));
+        }
+        if(entry.screen) {
+          this.program.run(entry.screen);
         }
       }
     }
