@@ -17,6 +17,8 @@ Sure, why not. Bask in the glory of classic terminal menus:
 
 ![image](https://cloud.githubusercontent.com/assets/177243/4414059/0e4e9a00-4510-11e4-924e-59db1c523557.png)
 
+![image](https://cloud.githubusercontent.com/assets/177243/4414078/6337fade-4510-11e4-811d-a6555dccacd8.png)
+
 super basic minimal example
 ---
 
