@@ -11,6 +11,15 @@ Well, okay, and you can give menus an `onLoad` and `onUnload`, which will trigge
 
 Because part of the beauty of a retro ansi terminal menu program for serious 80s technicolor business is that you don't need a lot to do a lot.
 
+How do I use it?
+---
+
+It's a node package with a regular [npm](https://www.npmjs.org/package/terminal-menu-program) entry, so:
+
+> npm install terminal-menu-program
+
+in your project directory, and then require it in. See the super simple example code below for, unsurprisingly, an example of that!
+
 Screenshots?
 ---
 Sure, why not. Bask in the glory of classic terminal menus:

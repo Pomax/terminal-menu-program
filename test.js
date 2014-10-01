@@ -48,11 +48,11 @@ var subMenu2 = (function(program) {
 
 var toggleMenu =(function(program){
   var menu = program.menu("main3");
-  menu.text("Toggle menu");
+  menu.text("Sub menu 3: a toggle menu");
   menu.spacer();
   menu.text("This is an integral options page, where you can set any combination of states,");
   menu.text("and saving will do a callback with all states in an options object. Cancel restores");
-  menu.text("the state when you entered the menu.");
+  menu.text("the state to what it was when you entered this menu.");
   menu.spacer();
   menu.check("toggle 1", true);
   menu.check("toggle 2", true);
