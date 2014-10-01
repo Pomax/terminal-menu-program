@@ -42,6 +42,8 @@ Program.prototype = {
   },
   halt: function() {
     this.reset();
+    // hand input back to the terminal
+    process.stdin.setRawMode(false);
   },
   debug: function(s) {
     this.active.menu.write(s+"\n");

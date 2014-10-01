@@ -43,7 +43,7 @@ Menu.prototype = {
   close: function() {
     if(this.menu) {
       this.menu.reset();
-      this.menu.close();
+      this.menu.close(true); // keep input tied to the menu system
     }
   },
 
