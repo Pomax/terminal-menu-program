@@ -4,7 +4,7 @@
   "description": "retro ansi terminal menu programs for serious 80s technicolor business",
   "main": "index.js",
   "dependencies": {
-    "terminal-menu": "^0.3.2"
+    "terminal-menu": "https://github.com/Pomax/terminal-menu/archive/master.tar.gz"
   },
   "scripts": {
     "test": "node test.js"
