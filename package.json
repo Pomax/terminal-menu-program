@@ -1,6 +1,6 @@
 {
   "name": "terminal-menu-program",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "retro ansi terminal menu programs for serious 80s technicolor business",
   "main": "index.js",
   "dependencies": {
