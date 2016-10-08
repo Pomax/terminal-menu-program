@@ -1,7 +1,7 @@
-### This project is no longer being actively maintained, although I will happily merge in PRs to fix issues
+### (This project is no longer being actively maintained, although I will happily merge in PRs to fix issues)
 
-Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business... programs.
----
+# Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business... programs.
+
 
 Who likes install scripts with runtime flags? Really? Guess who doesn't: everyone else (rounded up).
 
