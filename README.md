@@ -1,3 +1,5 @@
+### This project is no longer being actively maintained, although I will happily merge in PRs to fix issues
+
 Terminal menu programs, using retro ansi terminal menus for serious 80s technicolor business... programs.
 ---
 
