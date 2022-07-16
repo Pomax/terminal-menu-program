@@ -109,7 +109,7 @@ Menu.prototype = {
         this.departureidx = idx;
         if(entry.screen) {
           this.schedule(function() {
-            this.program.run(entry.screen.name);
+            this.program.run(entry.screen);
           });
         }
         if(entry.callback) {
@@ -121,7 +121,7 @@ Menu.prototype = {
           entry.callback(copy(this.options));
         }
         if(entry.screen) {
-          this.program.run(entry.screen.name);
+          this.program.run(entry.screen);
         }
       }
       if(entry.type === "cancel") {
@@ -130,7 +130,7 @@ Menu.prototype = {
           entry.callback(copy(this.options));
         }
         if(entry.screen) {
-          this.program.run(entry.screen.name);
+          this.program.run(entry.screen);
         }
       }
     }
